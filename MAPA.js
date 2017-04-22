@@ -5,7 +5,7 @@ function initAutocomplete() {
   });
   
   var ctaLayer = new google.maps.KmlLayer({
-    scr: 'KML/mapa1.kml',
+    url: 'https://raw.githubusercontent.com/tiagocetto/tiagocetto.github.io/master/KML/mapa1.kml',
     map: map
   }); 
 

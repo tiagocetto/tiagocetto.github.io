@@ -5,7 +5,7 @@ function initAutocomplete() {
   });
   
   var ctaLayer = new google.maps.KmlLayer({
-    url: 'https://raw.githubusercontent.com/tiagocetto/mapas/master/teste%20mapa%20(17).kml',
+    scr: 'KML/mapa1.kml',
     map: map
   }); 
 

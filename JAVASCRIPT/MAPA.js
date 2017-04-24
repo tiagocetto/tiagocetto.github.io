@@ -1,14 +1,18 @@
-
+﻿
 
 var kml = {
-    a: {
-        name: "KML1",
-        url: "https://raw.githubusercontent.com/tiagocetto/tiagocetto.github.io/master/KML/mapa1.kml"
-    },
-    b: {
-        name: "KML2",
-        url: "https://raw.githubusercontent.com/tiagocetto/tiagocetto.github.io/master/KML/mapa2.kml"
-    }
+    	KMLa: {
+        	name: "KML1",
+        	url: "https://raw.githubusercontent.com/tiagocetto/tiagocetto.github.io/master/KML/mapa1.kml"
+    	},
+	KMLb: {
+        	name: "KML2",
+        	url: "https://raw.githubusercontent.com/tiagocetto/tiagocetto.github.io/master/KML/mapa2.kml"
+    	},
+	KMLc: {
+        	name: "KML3",
+        	url: "https://raw.githubusercontent.com/tiagocetto/tiagocetto.github.io/master/KML/mapa3.kml"
+    	}
 };
 
 
@@ -122,21 +126,28 @@ function toggleKML(checked, id) {
 
 };
 
-// create the controls dynamically because it's easier, really
+
+
 function createTogglers() {
 
-    var html = "<form><ul>";
-    for (var prop in kml) {
-        html += "<li id=\"selector-" + prop + "\"><input type='checkbox' id='" + prop + "'" +
-        " onclick='highlight(this,\"selector-" + prop + "\"); toggleKML(this.checked, this.id)' \/>" +
-        kml[prop].name + "<\/li>";
-    }
-    html += "<li class='control'><a href='#' onclick='removeAll();return false;'>" +
-    "Remove all layers<\/a><\/li>" + 
-    "<\/ul><\/form>";
 
-    document.getElementById("toggle_box").innerHTML = html;
+var html = "<ul class=\"unstyled" + "\">";
+    for (var prop in kml) {
+        html += "<li id=\"selector-" + prop + "\"><input class=\"normal" + "\" type='checkbox' id='" + prop + "'" +
+        " onclick='highlight(this,\"selector-" + prop + "\"); toggleKML(this.checked, this.id)' \/>" +
+         "<label for=\"" + prop + "\">" +
+     kml[prop].name +  "</label>" +"<\/li>";
+    }
+
+html += "<li id='selector-removecamadas'><input class='normal' type='checkbox'    id='removecamadas'" +
+        " onclick='removeAll();return false;' \/>" +
+         "<label for='removecamadas'>" +
+        "Remover Camadas</label>" +"<\/li>" + 
+    "<\/ul>";
+	document.getElementById("camadas").innerHTML = html;
 };
+
+
 
 // easy way to remove all objects
 function removeAll() {

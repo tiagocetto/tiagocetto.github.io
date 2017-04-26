@@ -3,15 +3,15 @@
 var kml = {
     	KMLa: {
         	name: "KML1",
-        	url: "https://raw.githubusercontent.com/tiagocetto/tiagocetto.github.io/master/KML/mapa1.kml"
+        	url: "https://raw.githubusercontent.com/tiagocetto/tiagocetto.github.io/master/KML/mapaA.kml"
     	},
 	KMLb: {
         	name: "KML2",
-        	url: "https://raw.githubusercontent.com/tiagocetto/tiagocetto.github.io/master/KML/mapa2.kml"
+        	url: "https://raw.githubusercontent.com/tiagocetto/tiagocetto.github.io/master/KML/mapaB.kml"
     	},
 	KMLc: {
         	name: "KML3",
-        	url: "https://raw.githubusercontent.com/tiagocetto/tiagocetto.github.io/master/KML/mapa3.kml"
+        	url: "https://raw.githubusercontent.com/tiagocetto/tiagocetto.github.io/master/KML/mapaC.kml"
     	}
 };
 

@@ -23,7 +23,7 @@ function initAutocomplete() {
 	
     var options = {
 	center: {lat: -20.282, lng: -40.321},
-        zoom: 13,
+        zoom: 9,
 
     }
     map = new google.maps.Map(document.getElementById("map"), options);
